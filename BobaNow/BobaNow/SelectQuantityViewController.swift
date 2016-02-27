@@ -1,5 +1,5 @@
 //
-//  SelectQuantityTableViewController.swift
+//  SelectQuantityViewController.swift
 //  BobaNow
 //
 //  Created by Tianlin Zhang on 2/27/16.
@@ -8,8 +8,8 @@
 
 import UIKit
 
-class SelectQuantityTableViewController: UITableViewController {
-    
+class SelectQuantityViewController: UIViewController {
+
     private var _currentStore: BobaStore!
     private var _currentOrderItem: OrderItem!
     private var _quantity: Int!
@@ -37,5 +37,6 @@ class SelectQuantityTableViewController: UITableViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+
 
 }

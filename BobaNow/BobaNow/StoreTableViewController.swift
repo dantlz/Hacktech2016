@@ -45,7 +45,7 @@ class StoreTableViewController: UITableViewController {
     }
     
     @IBAction func unwindFromItemSpecifics(segue: UIStoryboardSegue){
-        let ISCon = segue.sourceViewController as! SelectQuantityTableViewController
+        let ISCon = segue.sourceViewController as! SelectQuantityViewController
         
         if segue.identifier == "OrderComplete" {
             _allOrders.append(ISCon.getOrderItem())

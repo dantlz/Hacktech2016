@@ -24,7 +24,7 @@ class SelectIceTableViewController: UITableViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let destination = segue.destinationViewController as! SelectQuantityTableViewController
+        let destination = segue.destinationViewController as! SelectQuantityViewController
         destination.setStore(_currentStore!)
         destination.setOrderItem(_currentOrderItem!)
         dismissViewControllerAnimated(true, completion: nil)
