@@ -16,11 +16,9 @@ class StoreTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         if(_store != nil){
             self.navigationItem.title = _store?.name
         }
-        
     }
     
     func setStore(store:BobaStore){
@@ -34,7 +32,7 @@ class StoreTableViewController: UITableViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let destination = segue.destinationViewController as! SelectSizeTableViewController
-        
+    
         switch segue.identifier!{
         default:// "ItemSelected":
             let orderItem = OrderItem(name:_selectedBoba!)
