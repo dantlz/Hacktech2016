@@ -44,13 +44,13 @@ class SelectSweetnessTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("ItemSpecificViewCell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("SweetnessCell", forIndexPath: indexPath)
         cell.textLabel?.text = (String)(_sweetnessOptions[indexPath.row])
         return cell
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tableView.numberOfRowsInSection(0)
+        return _sweetnessOptions.count
     }
     
     override func didReceiveMemoryWarning() {

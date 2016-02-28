@@ -19,8 +19,11 @@ class SelectQuantityViewController: UIViewController {
         self.navigationItem.title = "Select Quantity"
     }
     
-    //int((tableView.cellForRowAtIndexPath(indexPath)?.textLabel?.text)!)!
-    //Done button: performSegueWithIdentifier("OrderComplete", sender: self)
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if(segue.identifier == "OrderComplete"){
+//            _currentOrderItem.quantity = Get int value front text field
+        }
+    }
     
     func setStore(store: BobaStore){
         _currentStore = store
@@ -37,6 +40,4 @@ class SelectQuantityViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
-
 }
