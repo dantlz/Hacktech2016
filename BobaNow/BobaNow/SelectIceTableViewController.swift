@@ -43,13 +43,13 @@ class SelectIceTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("ItemSpecificViewCell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("IceCell", forIndexPath: indexPath)
         cell.textLabel?.text = (String)(_icePercentage[indexPath.row])
         return cell
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tableView.numberOfRowsInSection(0)
+        return _icePercentage.count
     }
     
     override func didReceiveMemoryWarning() {

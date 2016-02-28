@@ -45,13 +45,13 @@ class SelectSizeTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("ItemSpecificViewCell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("SizeCell", forIndexPath: indexPath)
         cell.textLabel?.text = _sizeOptions[indexPath.row]
         return cell
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tableView.numberOfRowsInSection(0)
+        return _sizeOptions.count
     }
     
     override func didReceiveMemoryWarning() {

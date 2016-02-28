@@ -10,8 +10,7 @@ import UIKit
 
 class StoreTableViewController: UITableViewController {
     
-    private var _store: BobaStore?
-    private var _selectedBoba: String?
+    private var _store: BobaStore!
     private var _allOrders = [OrderItem]()
     
     override func viewDidLoad() {
@@ -26,8 +25,7 @@ class StoreTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        _selectedBoba = tableView.cellForRowAtIndexPath(indexPath)?.textLabel?.text
-        performSegueWithIdentifier("ItemSelected", sender: self)
+        performSegueWithIdentifier("SelectSize", sender: tableView.cellForRowAtIndexPath(indexPath)?.textLabel?.text)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -35,7 +33,7 @@ class StoreTableViewController: UITableViewController {
     
         switch segue.identifier!{
         default:// "ItemSelected":
-            let orderItem = OrderItem(name:_selectedBoba!)
+            let orderItem = OrderItem(name: sender! as! String)
             destination.setOrderItem(orderItem)
             destination.setStore(_store!)
             break
@@ -55,7 +53,7 @@ class StoreTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("StoreViewCell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("BobaNameCell", forIndexPath: indexPath)
         cell.textLabel?.text = _store?.bobaList[indexPath.row]
         return cell
     }
@@ -63,6 +61,4 @@ class StoreTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return (_store?.bobaList.count)!
     }
-
-
 }
