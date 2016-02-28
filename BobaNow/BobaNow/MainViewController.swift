@@ -36,11 +36,21 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         bobaStoreList.append(ozero)
         bobaStoreList.append(teabrick)
         bobaStoreList.append(teastation)
+        
+        self.automaticallyAdjustsScrollViewInsets = false
+        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "addTapped")
+        //hide navigation bar
+        //self.navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
+    func  addTapped(){
+        toggleSideMenuView()
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         var bobaStore: BobaStore!
         bobaStore = bobaStoreList[indexPath.row]
+        //self.navigationController?.setNavigationBarHidden(false, animated: false)
         performSegueWithIdentifier("ShowSelected", sender: bobaStore)
     }
     
