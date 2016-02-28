@@ -10,18 +10,31 @@ import UIKit
 
 class SelectQuantityViewController: UIViewController {
 
+    @IBOutlet weak var sizeLabel: UILabel!
+    @IBOutlet weak var sweetnessLabel: UILabel!
+    @IBOutlet weak var iceLabel: UILabel!
+    @IBOutlet weak var quantityInputTextfield: UITextField!
+    
+    
     private var _currentStore: BobaStore!
     private var _currentOrderItem: OrderItem!
-    private var _quantity: Int!
-        
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "Select Quantity"
+        sizeLabel.text = _currentOrderItem.size
+        sweetnessLabel.text = (String)(_currentOrderItem.sweetnessPercentage*100) + "%"
+        iceLabel.text = (String)(_currentOrderItem.icePercentage*100) + "%"
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if(segue.identifier == "OrderComplete"){
-//            _currentOrderItem.quantity = Get int value front text field
+            if(quantityInputTextfield.text != nil){
+                _currentOrderItem.quantity = (Int)(quantityInputTextfield.text!)!
+            }
+            else{
+                return
+            }
         }
     }
     
