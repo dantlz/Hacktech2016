@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ji3-l6-1Ge">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ji3-l6-1Ge">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -179,39 +179,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ob9-T8-drj">
-                                <rect key="frame" x="24" y="513" width="553" height="47"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="ob9-T8-drj" secondAttribute="height" multiplier="553:57" id="RVK-aQ-n6m"/>
-                                    <constraint firstAttribute="height" constant="57" id="nGV-UG-2Sr"/>
-                                    <constraint firstAttribute="width" constant="553" id="peB-b7-tan"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
-                                <state key="normal" title="Proceeed to Checkout">
-                                    <color key="titleColor" red="1" green="0.4142429158" blue="0.42735411849999999" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="RVK-aQ-n6m"/>
-                                        <exclude reference="nGV-UG-2Sr"/>
-                                        <exclude reference="peB-b7-tan"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular" misplaced="YES">
-                                    <rect key="frame" x="24" y="668" width="553" height="57"/>
-                                    <mask key="constraints">
-                                        <exclude reference="RVK-aQ-n6m"/>
-                                        <include reference="nGV-UG-2Sr"/>
-                                        <include reference="peB-b7-tan"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <segue destination="Rse-Wz-To1" kind="popoverPresentation" identifier="OrderComplete" popoverAnchorView="ob9-T8-drj" id="HLy-OR-i7N">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
-                                </connections>
-                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alignment="top" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="1zP-KX-q95">
                                 <rect key="frame" x="55" y="147" width="736" height="30"/>
                                 <subviews>
@@ -252,24 +219,9 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Sweetness:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FER-mt-YLw">
                                                 <rect key="frame" x="0.0" y="0.0" width="95" height="26"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="171" id="Y53-BI-h7p">
-                                                        <variation key="heightClass=regular" constant="400"/>
-                                                    </constraint>
-                                                </constraints>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="19"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
-                                                <variation key="default">
-                                                    <mask key="constraints">
-                                                        <exclude reference="Y53-BI-h7p"/>
-                                                    </mask>
-                                                </variation>
-                                                <variation key="heightClass=regular">
-                                                    <mask key="constraints">
-                                                        <include reference="Y53-BI-h7p"/>
-                                                    </mask>
-                                                </variation>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Regular" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RdW-cg-ED8">
                                                 <rect key="frame" x="105" y="0.0" width="95" height="26"/>
@@ -374,29 +326,87 @@
                                     </mask>
                                 </variation>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ob9-T8-drj">
+                                <rect key="frame" x="24" y="513" width="553" height="47"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="553" id="Qor-LB-bg1"/>
+                                    <constraint firstAttribute="width" secondItem="ob9-T8-drj" secondAttribute="height" multiplier="553:57" id="RVK-aQ-n6m"/>
+                                    <constraint firstAttribute="height" constant="57" id="ZGN-E1-wie"/>
+                                    <constraint firstAttribute="height" constant="57" id="nGV-UG-2Sr"/>
+                                    <constraint firstAttribute="width" constant="553" id="peB-b7-tan"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
+                                <state key="normal" title="Proceeed to Checkout">
+                                    <color key="titleColor" red="1" green="0.4142429158" blue="0.42735411849999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Qor-LB-bg1"/>
+                                        <exclude reference="RVK-aQ-n6m"/>
+                                        <exclude reference="ZGN-E1-wie"/>
+                                        <exclude reference="nGV-UG-2Sr"/>
+                                        <exclude reference="peB-b7-tan"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular" misplaced="YES">
+                                    <rect key="frame" x="24" y="668" width="553" height="57"/>
+                                    <mask key="constraints">
+                                        <exclude reference="Qor-LB-bg1"/>
+                                        <exclude reference="RVK-aQ-n6m"/>
+                                        <include reference="ZGN-E1-wie"/>
+                                        <exclude reference="nGV-UG-2Sr"/>
+                                        <exclude reference="peB-b7-tan"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <segue destination="Rse-Wz-To1" kind="popoverPresentation" identifier="OrderComplete" popoverAnchorView="ob9-T8-drj" id="HLy-OR-i7N">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.4142429158" blue="0.42735411849999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="ob9-T8-drj" firstAttribute="centerX" secondItem="DM4-hJ-sXI" secondAttribute="centerX" id="2ZU-CP-6j4"/>
                             <constraint firstItem="1zP-KX-q95" firstAttribute="centerX" secondItem="DM4-hJ-sXI" secondAttribute="centerX" id="5WF-20-cTs"/>
                             <constraint firstItem="HWB-wL-hkc" firstAttribute="top" secondItem="ob9-T8-drj" secondAttribute="bottom" constant="50" id="6wc-KK-o7Y"/>
+                            <constraint firstItem="ob9-T8-drj" firstAttribute="leading" secondItem="DM4-hJ-sXI" secondAttribute="leading" constant="25" id="KOs-vl-128">
+                                <variation key="heightClass=regular" constant="20"/>
+                            </constraint>
                             <constraint firstItem="1zP-KX-q95" firstAttribute="top" secondItem="u93-1M-cO3" secondAttribute="bottom" constant="99" id="QJf-xk-CRL"/>
+                            <constraint firstAttribute="trailing" secondItem="ob9-T8-drj" secondAttribute="trailing" constant="23" id="eTs-rC-GmZ">
+                                <variation key="heightClass=regular" constant="20"/>
+                            </constraint>
                             <constraint firstItem="ob9-T8-drj" firstAttribute="leading" secondItem="DM4-hJ-sXI" secondAttribute="leadingMargin" constant="3" id="mI0-XT-M6P"/>
+                            <constraint firstItem="HWB-wL-hkc" firstAttribute="top" secondItem="ob9-T8-drj" secondAttribute="bottom" constant="70" id="xgN-h6-cvY">
+                                <variation key="heightClass=regular" constant="50"/>
+                            </constraint>
                             <constraint firstItem="ob9-T8-drj" firstAttribute="centerX" secondItem="DM4-hJ-sXI" secondAttribute="centerX" id="yjf-Gz-peb"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="5WF-20-cTs"/>
                                 <exclude reference="QJf-xk-CRL"/>
+                                <exclude reference="2ZU-CP-6j4"/>
+                                <exclude reference="KOs-vl-128"/>
+                                <exclude reference="eTs-rC-GmZ"/>
                                 <exclude reference="mI0-XT-M6P"/>
                                 <exclude reference="6wc-KK-o7Y"/>
+                                <exclude reference="xgN-h6-cvY"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
                             <mask key="constraints">
                                 <include reference="5WF-20-cTs"/>
                                 <include reference="QJf-xk-CRL"/>
-                                <include reference="mI0-XT-M6P"/>
-                                <include reference="6wc-KK-o7Y"/>
+                                <include reference="2ZU-CP-6j4"/>
+                                <include reference="KOs-vl-128"/>
+                                <include reference="eTs-rC-GmZ"/>
+                                <exclude reference="mI0-XT-M6P"/>
+                                <exclude reference="yjf-Gz-peb"/>
+                                <exclude reference="6wc-KK-o7Y"/>
+                                <include reference="xgN-h6-cvY"/>
                             </mask>
                         </variation>
                     </view>
