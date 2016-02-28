@@ -13,7 +13,7 @@ class SelectQuantityViewController: UIViewController {
     private var _currentStore: BobaStore!
     private var _currentOrderItem: OrderItem!
     private var _quantity: Int!
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "Select Quantity"
