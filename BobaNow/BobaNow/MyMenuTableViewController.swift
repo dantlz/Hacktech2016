@@ -10,7 +10,7 @@ import UIKit
 
 class MyMenuTableViewController: UITableViewController {
     
-    let menuItemNames = ["BobaNow", "Account", "Payment Methods", "Address", "History"]
+    let menuItemNames = ["BobaNow!", "Account", "Payment Methods", "Address", "History"]
     var selectedMenuItem : Int = 0
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,6 +61,36 @@ class MyMenuTableViewController: UITableViewController {
         cell!.textLabel?.text = menuItemNames[indexPath.row]
 
         return cell!
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if (indexPath.row == selectedMenuItem) {
+            return
+        }
+        else{
+            selectedMenuItem = indexPath.row
+             let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main",bundle: nil)
+             var destViewController : UIViewController
+             switch (indexPath.row) {
+             case 0:
+                destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("BobaNowVC")
+                break
+             case 1:
+                destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("AccountVC")
+                break
+             case 2:
+                destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("PaymentVC")
+                break
+             case 3:
+                destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("AddressVC")
+                break
+             default:
+                destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("HistoryVC")
+                break
+            }
+            sideMenuController()?.setContentViewController(destViewController)
+        }
+        
     }
 
 

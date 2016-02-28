@@ -10,7 +10,7 @@
         <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="BobaNow" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BobaNowVC" id="BYZ-38-t0r" customClass="MainViewController" customModule="BobaNow" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -104,6 +104,174 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2206" y="393.75"/>
+        </scene>
+        <!--Address View Controller-->
+        <scene sceneID="gkR-cz-vdZ">
+            <objects>
+                <viewController storyboardIdentifier="AddressVC" id="5Od-dI-xId" customClass="AddressViewController" customModule="BobaNow" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="osl-ho-wFS"/>
+                        <viewControllerLayoutGuide type="bottom" id="5SU-qo-Gab"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Kn4-Rk-5o2">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yFP-m0-NaH">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem title="Item" systemItem="add" id="LYs-bi-uSC">
+                                        <connections>
+                                            <action selector="ShowMenuBar:" destination="5Od-dI-xId" id="vn0-5E-SkD"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                </variation>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="yFP-m0-NaH"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="subviews">
+                                <include reference="yFP-m0-NaH"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LOR-mm-9az" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2686" y="-514.5"/>
+        </scene>
+        <!--History View Controller-->
+        <scene sceneID="ive-oa-f3t">
+            <objects>
+                <viewController storyboardIdentifier="HistoryVC" id="Luz-Vh-sIO" customClass="HistoryViewController" customModule="BobaNow" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gx3-cy-TVP"/>
+                        <viewControllerLayoutGuide type="bottom" id="noz-qU-c7Y"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bU7-x7-qvS">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bwu-XG-VvY">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="add" id="qUs-O9-RXw">
+                                        <connections>
+                                            <action selector="ShowMenuBar:" destination="Luz-Vh-sIO" id="elU-Zk-kOD"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                </variation>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="bwu-XG-VvY"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="subviews">
+                                <include reference="bwu-XG-VvY"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6kB-hD-OuM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3402" y="-514.5"/>
+        </scene>
+        <!--Account View Controller-->
+        <scene sceneID="eZa-nt-oji">
+            <objects>
+                <viewController storyboardIdentifier="AccountVC" id="wDX-e1-5XG" customClass="AccountViewController" customModule="BobaNow" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cae-bX-RRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="7US-Id-kV4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KtC-gb-Qfz">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oLt-yO-vBB">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="add" id="e0t-Fe-ra4">
+                                        <connections>
+                                            <action selector="ShowSideBar:" destination="wDX-e1-5XG" id="0wI-0r-b6t"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="68" width="600" height="44"/>
+                                </variation>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="oLt-yO-vBB"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="subviews">
+                                <include reference="oLt-yO-vBB"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XVs-XP-0rp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1286" y="-517.5"/>
+        </scene>
+        <!--Payment View Controller-->
+        <scene sceneID="WfM-v2-b1P">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SQv-Je-bPN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="PaymentVC" id="7NU-4c-Mfc" customClass="PaymentViewController" customModule="BobaNow" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kia-t9-xje"/>
+                        <viewControllerLayoutGuide type="bottom" id="Vv0-JH-C1D"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nng-AS-29V">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u1O-N0-Cca">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="add" id="MHB-Mg-8Ny">
+                                        <connections>
+                                            <action selector="ShowMenubar:" destination="7NU-4c-Mfc" id="wTg-nj-F0Q"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="36" width="600" height="44"/>
+                                </variation>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="u1O-N0-Cca"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="subviews">
+                                <include reference="u1O-N0-Cca"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="2038" y="-514.5"/>
         </scene>
         <!--Store Table View Controller-->
         <scene sceneID="5zo-uR-fH0">
