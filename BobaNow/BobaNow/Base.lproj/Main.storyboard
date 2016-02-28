@@ -330,7 +330,9 @@
                                 <rect key="frame" x="24" y="513" width="553" height="47"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="553" id="Qor-LB-bg1"/>
                                     <constraint firstAttribute="width" secondItem="ob9-T8-drj" secondAttribute="height" multiplier="553:57" id="RVK-aQ-n6m"/>
+                                    <constraint firstAttribute="height" constant="57" id="ZGN-E1-wie"/>
                                     <constraint firstAttribute="height" constant="57" id="nGV-UG-2Sr"/>
                                     <constraint firstAttribute="width" constant="553" id="peB-b7-tan"/>
                                 </constraints>
@@ -340,7 +342,9 @@
                                 </state>
                                 <variation key="default">
                                     <mask key="constraints">
+                                        <exclude reference="Qor-LB-bg1"/>
                                         <exclude reference="RVK-aQ-n6m"/>
+                                        <exclude reference="ZGN-E1-wie"/>
                                         <exclude reference="nGV-UG-2Sr"/>
                                         <exclude reference="peB-b7-tan"/>
                                     </mask>
@@ -348,9 +352,11 @@
                                 <variation key="heightClass=regular" misplaced="YES">
                                     <rect key="frame" x="24" y="668" width="553" height="57"/>
                                     <mask key="constraints">
+                                        <exclude reference="Qor-LB-bg1"/>
                                         <exclude reference="RVK-aQ-n6m"/>
-                                        <include reference="nGV-UG-2Sr"/>
-                                        <include reference="peB-b7-tan"/>
+                                        <include reference="ZGN-E1-wie"/>
+                                        <exclude reference="nGV-UG-2Sr"/>
+                                        <exclude reference="peB-b7-tan"/>
                                     </mask>
                                 </variation>
                                 <connections>
@@ -362,26 +368,45 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.4142429158" blue="0.42735411849999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="ob9-T8-drj" firstAttribute="centerX" secondItem="DM4-hJ-sXI" secondAttribute="centerX" id="2ZU-CP-6j4"/>
                             <constraint firstItem="1zP-KX-q95" firstAttribute="centerX" secondItem="DM4-hJ-sXI" secondAttribute="centerX" id="5WF-20-cTs"/>
                             <constraint firstItem="HWB-wL-hkc" firstAttribute="top" secondItem="ob9-T8-drj" secondAttribute="bottom" constant="50" id="6wc-KK-o7Y"/>
+                            <constraint firstItem="ob9-T8-drj" firstAttribute="leading" secondItem="DM4-hJ-sXI" secondAttribute="leading" constant="25" id="KOs-vl-128">
+                                <variation key="heightClass=regular" constant="20"/>
+                            </constraint>
                             <constraint firstItem="1zP-KX-q95" firstAttribute="top" secondItem="u93-1M-cO3" secondAttribute="bottom" constant="99" id="QJf-xk-CRL"/>
+                            <constraint firstAttribute="trailing" secondItem="ob9-T8-drj" secondAttribute="trailing" constant="23" id="eTs-rC-GmZ">
+                                <variation key="heightClass=regular" constant="20"/>
+                            </constraint>
                             <constraint firstItem="ob9-T8-drj" firstAttribute="leading" secondItem="DM4-hJ-sXI" secondAttribute="leadingMargin" constant="3" id="mI0-XT-M6P"/>
+                            <constraint firstItem="HWB-wL-hkc" firstAttribute="top" secondItem="ob9-T8-drj" secondAttribute="bottom" constant="70" id="xgN-h6-cvY">
+                                <variation key="heightClass=regular" constant="50"/>
+                            </constraint>
                             <constraint firstItem="ob9-T8-drj" firstAttribute="centerX" secondItem="DM4-hJ-sXI" secondAttribute="centerX" id="yjf-Gz-peb"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="5WF-20-cTs"/>
                                 <exclude reference="QJf-xk-CRL"/>
+                                <exclude reference="2ZU-CP-6j4"/>
+                                <exclude reference="KOs-vl-128"/>
+                                <exclude reference="eTs-rC-GmZ"/>
                                 <exclude reference="mI0-XT-M6P"/>
                                 <exclude reference="6wc-KK-o7Y"/>
+                                <exclude reference="xgN-h6-cvY"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
                             <mask key="constraints">
                                 <include reference="5WF-20-cTs"/>
                                 <include reference="QJf-xk-CRL"/>
+                                <include reference="2ZU-CP-6j4"/>
+                                <include reference="KOs-vl-128"/>
+                                <include reference="eTs-rC-GmZ"/>
                                 <exclude reference="mI0-XT-M6P"/>
-                                <include reference="6wc-KK-o7Y"/>
+                                <exclude reference="yjf-Gz-peb"/>
+                                <exclude reference="6wc-KK-o7Y"/>
+                                <include reference="xgN-h6-cvY"/>
                             </mask>
                         </variation>
                     </view>
