@@ -17,16 +17,16 @@ class SelectSizeTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = "Select Size"
+        self.navigationItem.title = "How much boba?"
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         _currentOrderItem!.size = (tableView.cellForRowAtIndexPath(indexPath)?.textLabel?.text)!
-        performSegueWithIdentifier("SelectSweetness", sender: self)
+        performSegueWithIdentifier("SelectPearls", sender: self)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let destination = segue.destinationViewController as! SelectSweetnessTableViewController
+        let destination = segue.destinationViewController as! SelectPearlTableViewController
         destination.setStore(_currentStore!)
         destination.setOrderItem(_currentOrderItem!)
         dismissViewControllerAnimated(true, completion: nil)
@@ -57,7 +57,4 @@ class SelectSizeTableViewController: UITableViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
-
-
 }

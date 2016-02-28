@@ -1,5 +1,5 @@
 //
-//  SelectSweetnessTableViewController.swift
+//  SelectPearlTableViewController.swift
 //  BobaNow
 //
 //  Created by Tianlin Zhang on 2/27/16.
@@ -8,24 +8,25 @@
 
 import UIKit
 
-class SelectSweetnessTableViewController: UITableViewController {
-    
+class SelectPearlTableViewController: UITableViewController {
+
     private var _currentStore: BobaStore!
     private var _currentOrderItem: OrderItem!
-    private var _sweetnessOptions = [0.00, 0.50, 0.75, 1.00]
+    private var _pearlOptions = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = "How sweet?"
+        self.navigationItem.title = "What kind of pearls?"
+        _pearlOptions = _currentStore.pearlList
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        _currentOrderItem!.sweetnessPercentage = Double((tableView.cellForRowAtIndexPath(indexPath)?.textLabel?.text)!)!
-        performSegueWithIdentifier("SelectIce", sender: self)
+        _currentOrderItem!.size = (tableView.cellForRowAtIndexPath(indexPath)?.textLabel?.text)!
+        performSegueWithIdentifier("SelectSweetness", sender: self)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let destination = segue.destinationViewController as! SelectIceTableViewController
+        let destination = segue.destinationViewController as! SelectSweetnessTableViewController
         destination.setStore(_currentStore!)
         destination.setOrderItem(_currentOrderItem!)
         dismissViewControllerAnimated(true, completion: nil)
@@ -44,16 +45,17 @@ class SelectSweetnessTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("SweetnessCell", forIndexPath: indexPath)
-        cell.textLabel?.text = (String)(_sweetnessOptions[indexPath.row])
+        let cell = tableView.dequeueReusableCellWithIdentifier("PearlCell", forIndexPath: indexPath)
+        cell.textLabel?.text = _pearlOptions[indexPath.row]
         return cell
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return _sweetnessOptions.count
+        return _pearlOptions.count
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+
 }
