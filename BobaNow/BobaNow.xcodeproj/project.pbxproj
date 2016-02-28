@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		12F4846B1C826E6C003CC7B6 /* StoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F4846A1C826E6C003CC7B6 /* StoreCell.swift */; };
+		12F484701C82C5CA003CC7B6 /* MySideMenuNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F4846F1C82C5CA003CC7B6 /* MySideMenuNavigationController.swift */; };
+		12F484731C82C693003CC7B6 /* ENSideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F484721C82C693003CC7B6 /* ENSideMenu.swift */; };
+		12F484751C82C69A003CC7B6 /* ENSideMenuNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F484741C82C69A003CC7B6 /* ENSideMenuNavigationController.swift */; };
+		12F484781C82C778003CC7B6 /* MyMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F484771C82C778003CC7B6 /* MyMenuTableViewController.swift */; };
 		3524CB77C130E961A7A156DC /* Pods_BobaNow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0623E7CD2160C6F033F2A3 /* Pods_BobaNow.framework */; };
 		BF033C8E1C82AA95004FE5CB /* SelectPearlTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF033C8D1C82AA95004FE5CB /* SelectPearlTableViewController.swift */; };
 		BF4247461C82656300A51085 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4247451C82656300A51085 /* AppDelegate.swift */; };
@@ -27,6 +31,10 @@
 /* Begin PBXFileReference section */
 		0EB92D3A8F4729F2C476C2CB /* Pods-BobaNow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BobaNow.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BobaNow/Pods-BobaNow.debug.xcconfig"; sourceTree = "<group>"; };
 		12F4846A1C826E6C003CC7B6 /* StoreCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreCell.swift; sourceTree = "<group>"; };
+		12F4846F1C82C5CA003CC7B6 /* MySideMenuNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySideMenuNavigationController.swift; sourceTree = "<group>"; };
+		12F484721C82C693003CC7B6 /* ENSideMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ENSideMenu.swift; sourceTree = "<group>"; };
+		12F484741C82C69A003CC7B6 /* ENSideMenuNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ENSideMenuNavigationController.swift; sourceTree = "<group>"; };
+		12F484771C82C778003CC7B6 /* MyMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyMenuTableViewController.swift; sourceTree = "<group>"; };
 		5CC0FD4231AB8FAADEE8C8E7 /* Pods-BobaNow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BobaNow.release.xcconfig"; path = "Pods/Target Support Files/Pods-BobaNow/Pods-BobaNow.release.xcconfig"; sourceTree = "<group>"; };
 		BF033C8D1C82AA95004FE5CB /* SelectPearlTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectPearlTableViewController.swift; sourceTree = "<group>"; };
 		BF4247421C82656200A51085 /* BobaNow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BobaNow.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,11 +66,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		12F4846C1C82C135003CC7B6 /* MenubarContollers */ = {
+		12F4846C1C82C135003CC7B6 /* MenuBarContollers */ = {
 			isa = PBXGroup;
 			children = (
+				12F4846F1C82C5CA003CC7B6 /* MySideMenuNavigationController.swift */,
+				12F484771C82C778003CC7B6 /* MyMenuTableViewController.swift */,
 			);
-			name = MenubarContollers;
+			name = MenuBarContollers;
+			sourceTree = "<group>";
+		};
+		12F484711C82C645003CC7B6 /* 3rdParty */ = {
+			isa = PBXGroup;
+			children = (
+				12F484741C82C69A003CC7B6 /* ENSideMenuNavigationController.swift */,
+				12F484721C82C693003CC7B6 /* ENSideMenu.swift */,
+			);
+			name = 3rdParty;
+			sourceTree = "<group>";
+		};
+		12F484761C82C71E003CC7B6 /* NormalController */ = {
+			isa = PBXGroup;
+			children = (
+				BF42475D1C82660300A51085 /* MainViewController.swift */,
+				BF42475F1C82664A00A51085 /* StoreTableViewController.swift */,
+				BF4247611C82668700A51085 /* SelectSizeTableViewController.swift */,
+				BF033C8D1C82AA95004FE5CB /* SelectPearlTableViewController.swift */,
+				BF4247631C8266AD00A51085 /* SelectSweetnessTableViewController.swift */,
+				BF4247651C8266BF00A51085 /* SelectIceTableViewController.swift */,
+				BFC70EEC1C8268D0006CEDE1 /* SelectQuantityViewController.swift */,
+			);
+			name = NormalController;
 			sourceTree = "<group>";
 		};
 		4686942CC89C8425B775D4A7 /* Pods */ = {
@@ -107,6 +140,7 @@
 				BF4247581C82657C00A51085 /* ViewControllers */,
 				BF42475A1C82659200A51085 /* UIComponents */,
 				BF4247591C82658600A51085 /* DataModels */,
+				12F484711C82C645003CC7B6 /* 3rdParty */,
 				BF4247571C82656900A51085 /* Others */,
 			);
 			path = BobaNow;
@@ -126,14 +160,8 @@
 		BF4247581C82657C00A51085 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				12F4846C1C82C135003CC7B6 /* MenubarContollers */,
-				BF42475D1C82660300A51085 /* MainViewController.swift */,
-				BF42475F1C82664A00A51085 /* StoreTableViewController.swift */,
-				BF4247611C82668700A51085 /* SelectSizeTableViewController.swift */,
-				BF033C8D1C82AA95004FE5CB /* SelectPearlTableViewController.swift */,
-				BF4247631C8266AD00A51085 /* SelectSweetnessTableViewController.swift */,
-				BF4247651C8266BF00A51085 /* SelectIceTableViewController.swift */,
-				BFC70EEC1C8268D0006CEDE1 /* SelectQuantityViewController.swift */,
+				12F4846C1C82C135003CC7B6 /* MenuBarContollers */,
+				12F484761C82C71E003CC7B6 /* NormalController */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -278,16 +306,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF4247621C82668700A51085 /* SelectSizeTableViewController.swift in Sources */,
+				12F484781C82C778003CC7B6 /* MyMenuTableViewController.swift in Sources */,
 				12F4846B1C826E6C003CC7B6 /* StoreCell.swift in Sources */,
 				BF42476C1C82674700A51085 /* BobaStore.swift in Sources */,
+				12F484731C82C693003CC7B6 /* ENSideMenu.swift in Sources */,
 				BF4247661C8266BF00A51085 /* SelectIceTableViewController.swift in Sources */,
 				BF4247461C82656300A51085 /* AppDelegate.swift in Sources */,
 				BF42475E1C82660300A51085 /* MainViewController.swift in Sources */,
 				BF42476E1C82676D00A51085 /* OrderItem.swift in Sources */,
 				BF4247601C82664A00A51085 /* StoreTableViewController.swift in Sources */,
 				BF033C8E1C82AA95004FE5CB /* SelectPearlTableViewController.swift in Sources */,
+				12F484751C82C69A003CC7B6 /* ENSideMenuNavigationController.swift in Sources */,
 				BF4247641C8266AD00A51085 /* SelectSweetnessTableViewController.swift in Sources */,
 				BFC70EED1C8268D0006CEDE1 /* SelectQuantityViewController.swift in Sources */,
+				12F484701C82C5CA003CC7B6 /* MySideMenuNavigationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

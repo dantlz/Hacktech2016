@@ -175,7 +175,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wct-01-uh5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1494" y="2610.75"/>
+            <point key="canvasLocation" x="2286" y="2607.75"/>
         </scene>
         <!--Select Quantity View Controller-->
         <scene sceneID="f9n-FM-so5">
@@ -409,7 +409,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="llx-kL-ZP8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2323" y="2595.75"/>
+            <point key="canvasLocation" x="3236" y="2607.75"/>
         </scene>
         <!--Select Pearl Table View Controller-->
         <scene sceneID="dAU-Yt-PRb">
@@ -476,26 +476,10 @@
             </objects>
             <point key="canvasLocation" x="2918" y="1875"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="g09-OK-vXS">
-            <objects>
-                <navigationController id="ggH-eB-yJk" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Q4T-aC-HJz">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="HIy-Vz-fz6"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gYJ-dg-qHE" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="990" y="162.75"/>
-        </scene>
-        <!--Navigation Controller-->
+        <!--My Side Menu Navigation Controller-->
         <scene sceneID="7rF-TS-hlf">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ji3-l6-1Ge" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ji3-l6-1Ge" customClass="MySideMenuNavigationController" customModule="BobaNow" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="a9A-Qi-OBb">
@@ -509,13 +493,10 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zwi-6j-ri2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="929" y="921.75"/>
+            <point key="canvasLocation" x="1389" y="393.75"/>
         </scene>
     </scenes>
     <resources>
         <image name="halfnhalf" width="600" height="384"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="HIy-Vz-fz6"/>
-    </inferredMetricsTieBreakers>
 </document>
