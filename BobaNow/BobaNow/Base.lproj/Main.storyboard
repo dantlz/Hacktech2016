@@ -73,7 +73,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1230" y="364"/>
+            <point key="canvasLocation" x="2206" y="393.75"/>
         </scene>
         <!--Store Table View Controller-->
         <scene sceneID="5zo-uR-fH0">
@@ -110,7 +110,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LLi-yd-hui" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="927" y="1115"/>
+            <point key="canvasLocation" x="1903" y="1144.5"/>
         </scene>
         <!--Select Size Table View Controller-->
         <scene sceneID="kTp-uN-LjP">
@@ -143,7 +143,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KZ5-kX-tMY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="180" y="1845"/>
+            <point key="canvasLocation" x="1156" y="1875"/>
         </scene>
         <!--Select Ice Table View Controller-->
         <scene sceneID="xVe-M5-Y46">
@@ -175,7 +175,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wct-01-uh5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="518" y="2581"/>
+            <point key="canvasLocation" x="1494" y="2610.75"/>
         </scene>
         <!--Select Quantity View Controller-->
         <scene sceneID="f9n-FM-so5">
@@ -409,7 +409,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="llx-kL-ZP8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1347" y="2565.75"/>
+            <point key="canvasLocation" x="2323" y="2595.75"/>
         </scene>
         <!--Select Pearl Table View Controller-->
         <scene sceneID="dAU-Yt-PRb">
@@ -441,7 +441,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jvs-8V-gK9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1028" y="1845"/>
+            <point key="canvasLocation" x="2004" y="1875"/>
         </scene>
         <!--Select Sweetness Table View Controller-->
         <scene sceneID="yJX-gr-IAW">
@@ -474,7 +474,23 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2yl-6f-Tg6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1942" y="1845"/>
+            <point key="canvasLocation" x="2918" y="1875"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="g09-OK-vXS">
+            <objects>
+                <navigationController id="ggH-eB-yJk" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Q4T-aC-HJz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="HIy-Vz-fz6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gYJ-dg-qHE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="990" y="162.75"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7rF-TS-hlf">
@@ -493,10 +509,13 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zwi-6j-ri2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="486" y="364"/>
+            <point key="canvasLocation" x="929" y="921.75"/>
         </scene>
     </scenes>
     <resources>
         <image name="halfnhalf" width="600" height="384"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="HIy-Vz-fz6"/>
+    </inferredMetricsTieBreakers>
 </document>
