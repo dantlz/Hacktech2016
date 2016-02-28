@@ -32,15 +32,27 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         let ozero = BobaStore(name: "Ozero", imagePath: "ozero", description: "This is a dope shit", costIncrease: 0.5,bobaList: ["taro milk tea", "original milk tea"], pearlList: ["boba","grass jelly"])
         let teabrick = BobaStore(name: "Tea Brick", imagePath: "teabrick", description: "This is a dope shit", costIncrease: 0.5,bobaList: ["taro milk tea", "original milk tea"], pearlList: ["boba","grass jelly"])
         let teastation = BobaStore(name: "Tea Station", imagePath: "teastation", description: "This is a dope shit", costIncrease: 0.5,bobaList: ["taro milk tea", "original milk tea"], pearlList: ["boba","grass jelly"])
+        let bobatime = BobaStore(name: "Boba Time", imagePath: "teastation", description: "This is a dope shit", costIncrease: 0.5,bobaList: ["taro milk tea", "original milk tea"], pearlList: ["boba","grass jelly"])
         bobaStoreList.append(halfandhalf)
         bobaStoreList.append(ozero)
         bobaStoreList.append(teabrick)
         bobaStoreList.append(teastation)
+        bobaStoreList.append(bobatime)
+        
+        self.automaticallyAdjustsScrollViewInsets = false
+        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "addTapped")
+        //hide navigation bar
+        //self.navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
+    func  addTapped(){
+        toggleSideMenuView()
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         var bobaStore: BobaStore!
         bobaStore = bobaStoreList[indexPath.row]
+        //self.navigationController?.setNavigationBarHidden(false, animated: false)
         performSegueWithIdentifier("ShowSelected", sender: bobaStore)
     }
     
