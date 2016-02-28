@@ -1,14 +1,15 @@
 //
-//  StoreTableViewCell.swift
+//  StoreCell.swift
 //  BobaNow
 //
-//  Created by Tianlin Zhang on 2/27/16.
+//  Created by Xinghan Wang on 2/27/16.
 //  Copyright © 2016 dantlz. All rights reserved.
 //
 
 import UIKit
 
-class StoreTableViewCell: UITableViewCell {
+class StoreCell: UITableViewCell {
+
     @IBOutlet weak var nameLbl:UILabel!
     @IBOutlet weak var thumbImg: UIImageView!
     
@@ -22,5 +23,4 @@ class StoreTableViewCell: UITableViewCell {
         nameLbl.text = store.name
         thumbImg.image = UIImage(named: "halfnhalf")
     }
-
 }
