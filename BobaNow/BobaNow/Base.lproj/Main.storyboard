@@ -17,26 +17,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="217" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DKd-qI-ztS">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="180" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DKd-qI-ztS">
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="StoreCell" rowHeight="217" id="m8a-LV-1bO" customClass="StoreCell" customModule="BobaNow" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="92" width="600" height="217"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="StoreCell" rowHeight="180" id="m8a-LV-1bO" customClass="StoreCell" customModule="BobaNow" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="92" width="600" height="180"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="m8a-LV-1bO" id="2q0-sd-qvs">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="216.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="179.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QEB-K2-k0E">
-                                                    <rect key="frame" x="188" y="76" width="213" height="65"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ihf-BM-IGK">
+                                                <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="halfnhalf" translatesAutoresizingMaskIntoConstraints="NO" id="ihf-BM-IGK">
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="223.5"/>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Half and Half Tea House" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QEB-K2-k0E">
+                                                    <rect key="frame" x="157" y="64" width="299" height="65"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="25"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="QEB-K2-k0E" firstAttribute="centerY" secondItem="2q0-sd-qvs" secondAttribute="centerY" id="4tv-Lr-GUV"/>
@@ -56,11 +55,17 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="DKd-qI-ztS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="GtO-Yw-xvd"/>
+                            <constraint firstItem="DKd-qI-ztS" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="IAQ-bF-9ZO"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="DKd-qI-ztS" secondAttribute="bottom" id="Z1n-zd-SnS"/>
+                            <constraint firstAttribute="trailing" secondItem="DKd-qI-ztS" secondAttribute="trailing" id="dVY-jW-9pI"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="4PT-fh-7WN"/>
                     <connections>
                         <outlet property="collection" destination="DKd-qI-ztS" id="97H-yf-QyD"/>
-                        <segue destination="Rse-Wz-To1" kind="show" id="PFp-nj-hYB"/>
+                        <segue destination="Rse-Wz-To1" kind="show" identifier="ShowSelected" id="PFp-nj-hYB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -228,4 +233,7 @@
             <point key="canvasLocation" x="556" y="364"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="halfnhalf" width="600" height="384"/>
+    </resources>
 </document>

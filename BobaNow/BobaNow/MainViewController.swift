@@ -21,7 +21,6 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     
     var bobaStoreList = [BobaStore]()
-    var selectedStore: BobaStore?
     
     @IBOutlet weak var collection: UITableView!
     
@@ -42,16 +41,21 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         bobaStoreList.append(teastation)
     }
     
-//    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-//        //Get the bobastore at this index
-//    }
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        var bobaStore: BobaStore!
+        bobaStore = bobaStoreList[indexPath.row]
+        performSegueWithIdentifier("ShowSelected", sender: bobaStore)
+    }
     
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        let destination = segue.destinationViewController as! ItemSpecificViewController
-//        destination.setStore(selectedStore!)
-//        
-//        performSegueWithIdentifier("StoreSelected", sender: self)
-//    }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "ShowSelected"{
+            if let storetablevc = segue.destinationViewController as? StoreTableViewController{
+                if let bobaStore = sender as? BobaStore{
+                    storetablevc.setStore(bobaStore)
+                }
+            }
+        }
+    }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let bobaStore = bobaStoreList[indexPath.row]
