@@ -11,15 +11,15 @@ import UIKit
 class StoreTableViewController: UITableViewController {
     
     private var _store: BobaStore!
-    private var _allOrders = [OrderItem]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         if(_store != nil){
             self.navigationItem.title = _store?.name
         }
+        
     }
-    
+        
     func setStore(store:BobaStore){
         _store = store
     }
@@ -37,14 +37,6 @@ class StoreTableViewController: UITableViewController {
             destination.setOrderItem(orderItem)
             destination.setStore(_store!)
             break
-        }
-    }
-    
-    @IBAction func unwindFromItemSpecifics(segue: UIStoryboardSegue){
-        let ISCon = segue.sourceViewController as! SelectQuantityViewController
-        
-        if segue.identifier == "OrderComplete" {
-            _allOrders.append(ISCon.getOrderItem())
         }
     }
     

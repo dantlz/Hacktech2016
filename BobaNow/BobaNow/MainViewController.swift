@@ -18,18 +18,15 @@ import UIKit
 
 class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    
-    
-    var bobaStoreList = [BobaStore]()
-    
+    private var bobaStoreList = [BobaStore]()
+    private var _allOrders = [OrderItem]()
+
     @IBOutlet weak var collection: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         collection.delegate = self
         collection.dataSource = self
-        
-        
         //hard-coded data configure and init
         let halfandhalf = BobaStore(name: "Half and Half Tea House", imagePath: "halfnhalf", description: "This is a dope shit", costIncrease: 0.5, bobaList: ["taro milk tea", "original milk tea"], pearlList: ["boba","grass jelly"])
         let ozero = BobaStore(name: "Ozero", imagePath: "ozero", description: "This is a dope shit", costIncrease: 0.5,bobaList: ["taro milk tea", "original milk tea"], pearlList: ["boba","grass jelly"])
@@ -57,6 +54,14 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
     
+    func addOrder(order: OrderItem){
+        _allOrders.append(order)
+    }
+    
+
+    
+    
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let bobaStore = bobaStoreList[indexPath.row]
         
@@ -67,7 +72,6 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
             let cell = StoreCell()
             cell.configureCell(bobaStore)
             return cell
-            
         }
     }
     
@@ -85,7 +89,6 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 }
 

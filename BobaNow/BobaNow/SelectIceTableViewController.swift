@@ -15,7 +15,7 @@ class SelectIceTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = "Select Ice Preferences"
+        self.navigationItem.title = "Ice Ice Baby"
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {

@@ -37,7 +37,9 @@ class BobaStore {
     }
     
     var pearlList:[String]{
-        return _pearlList
+        get{
+            return _pearlList
+        }
     }
     
     init(name: String, imagePath:String, description: String, costIncrease: Double, bobaList: [String], pearlList: [String]){
