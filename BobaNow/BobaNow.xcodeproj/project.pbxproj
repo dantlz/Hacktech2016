@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		12F4846B1C826E6C003CC7B6 /* StoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F4846A1C826E6C003CC7B6 /* StoreCell.swift */; };
 		BF4247461C82656300A51085 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4247451C82656300A51085 /* AppDelegate.swift */; };
 		BF42474B1C82656300A51085 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF4247491C82656300A51085 /* Main.storyboard */; };
 		BF42474D1C82656300A51085 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF42474C1C82656300A51085 /* Assets.xcassets */; };
@@ -16,13 +17,13 @@
 		BF4247621C82668700A51085 /* SelectSizeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4247611C82668700A51085 /* SelectSizeTableViewController.swift */; };
 		BF4247641C8266AD00A51085 /* SelectSweetnessTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4247631C8266AD00A51085 /* SelectSweetnessTableViewController.swift */; };
 		BF4247661C8266BF00A51085 /* SelectIceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4247651C8266BF00A51085 /* SelectIceTableViewController.swift */; };
-		BF42476A1C82671500A51085 /* StoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4247691C82671500A51085 /* StoreTableViewCell.swift */; };
 		BF42476C1C82674700A51085 /* BobaStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF42476B1C82674700A51085 /* BobaStore.swift */; };
 		BF42476E1C82676D00A51085 /* OrderItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF42476D1C82676D00A51085 /* OrderItem.swift */; };
 		BFC70EED1C8268D0006CEDE1 /* SelectQuantityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC70EEC1C8268D0006CEDE1 /* SelectQuantityViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		12F4846A1C826E6C003CC7B6 /* StoreCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreCell.swift; sourceTree = "<group>"; };
 		BF4247421C82656200A51085 /* BobaNow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BobaNow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF4247451C82656300A51085 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF42474A1C82656300A51085 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -34,7 +35,6 @@
 		BF4247611C82668700A51085 /* SelectSizeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectSizeTableViewController.swift; sourceTree = "<group>"; };
 		BF4247631C8266AD00A51085 /* SelectSweetnessTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectSweetnessTableViewController.swift; sourceTree = "<group>"; };
 		BF4247651C8266BF00A51085 /* SelectIceTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectIceTableViewController.swift; sourceTree = "<group>"; };
-		BF4247691C82671500A51085 /* StoreTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreTableViewCell.swift; sourceTree = "<group>"; };
 		BF42476B1C82674700A51085 /* BobaStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BobaStore.swift; sourceTree = "<group>"; };
 		BF42476D1C82676D00A51085 /* OrderItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderItem.swift; sourceTree = "<group>"; };
 		BFC70EEC1C8268D0006CEDE1 /* SelectQuantityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectQuantityViewController.swift; sourceTree = "<group>"; };
@@ -115,7 +115,7 @@
 		BF42475A1C82659200A51085 /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
-				BF4247691C82671500A51085 /* StoreTableViewCell.swift */,
+				12F4846A1C826E6C003CC7B6 /* StoreCell.swift */,
 			);
 			name = UIComponents;
 			sourceTree = "<group>";
@@ -192,10 +192,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF4247621C82668700A51085 /* SelectSizeTableViewController.swift in Sources */,
+				12F4846B1C826E6C003CC7B6 /* StoreCell.swift in Sources */,
 				BF42476C1C82674700A51085 /* BobaStore.swift in Sources */,
 				BF4247661C8266BF00A51085 /* SelectIceTableViewController.swift in Sources */,
 				BF4247461C82656300A51085 /* AppDelegate.swift in Sources */,
-				BF42476A1C82671500A51085 /* StoreTableViewCell.swift in Sources */,
 				BF42475E1C82660300A51085 /* MainViewController.swift in Sources */,
 				BF42476E1C82676D00A51085 /* OrderItem.swift in Sources */,
 				BF4247601C82664A00A51085 /* StoreTableViewController.swift in Sources */,

@@ -21,7 +21,6 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     
     var bobaStoreList = [BobaStore]()
-    var selectedStore: BobaStore?
     
     @IBOutlet weak var collection: UITableView!
     
@@ -43,31 +42,29 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        var store:BobaStore!
-        store = bobaStoreList[indexPath.row]
-             performSegueWithIdentifier("StoreSelected", sender: store)
+        var bobaStore: BobaStore!
+        bobaStore = bobaStoreList[indexPath.row]
+        performSegueWithIdentifier("ShowSelected", sender: bobaStore)
     }
     
-        override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-            if segue.identifier == "StoreSelected"{
-                if let destination = segue.destinationViewController as? StoreTableViewController{
-                    if let store = sender as? BobaStore{
-                        print("hsadfahfh")
-                        destination.setStore(store)
-                    }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "ShowSelected"{
+            if let storetablevc = segue.destinationViewController as? StoreTableViewController{
+                if let bobaStore = sender as? BobaStore{
+                    storetablevc.setStore(bobaStore)
                 }
             }
-    
-       }
+        }
+    }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let bobaStore = bobaStoreList[indexPath.row]
         
-        if let cell = collection.dequeueReusableCellWithIdentifier("StoreCell") as? StoreTableViewCell{
+        if let cell = collection.dequeueReusableCellWithIdentifier("StoreCell") as? StoreCell{
             cell.configureCell(bobaStore)
             return cell
         }else{
-            let cell = StoreTableViewCell()
+            let cell = StoreCell()
             cell.configureCell(bobaStore)
             return cell
             
@@ -88,7 +85,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
-    
 }
 

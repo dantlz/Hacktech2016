@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ji3-l6-1Ge">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ji3-l6-1Ge">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
         <!--Main View Controller-->
@@ -16,16 +16,61 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="180" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DKd-qI-ztS">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="StoreCell" rowHeight="180" id="m8a-LV-1bO" customClass="StoreCell" customModule="BobaNow" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="92" width="600" height="180"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="m8a-LV-1bO" id="2q0-sd-qvs">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="179.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="halfnhalf" translatesAutoresizingMaskIntoConstraints="NO" id="ihf-BM-IGK">
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="223.5"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Half and Half Tea House" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QEB-K2-k0E">
+                                                    <rect key="frame" x="157" y="64" width="299" height="65"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="25"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="QEB-K2-k0E" firstAttribute="centerY" secondItem="2q0-sd-qvs" secondAttribute="centerY" id="4tv-Lr-GUV"/>
+                                                <constraint firstItem="QEB-K2-k0E" firstAttribute="centerX" secondItem="2q0-sd-qvs" secondAttribute="centerX" id="5fj-fO-ybN"/>
+                                                <constraint firstAttribute="bottom" secondItem="ihf-BM-IGK" secondAttribute="bottom" id="MOe-Fw-B1z"/>
+                                                <constraint firstItem="ihf-BM-IGK" firstAttribute="leading" secondItem="2q0-sd-qvs" secondAttribute="leading" id="Ztc-o8-UeN"/>
+                                                <constraint firstAttribute="trailing" secondItem="ihf-BM-IGK" secondAttribute="trailing" id="diB-l4-h9A"/>
+                                                <constraint firstItem="ihf-BM-IGK" firstAttribute="top" secondItem="2q0-sd-qvs" secondAttribute="top" id="zSd-yE-saC"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameLbl" destination="QEB-K2-k0E" id="FI4-47-BDc"/>
+                                            <outlet property="thumbImg" destination="ihf-BM-IGK" id="3kd-s5-HCi"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="DKd-qI-ztS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="GtO-Yw-xvd"/>
+                            <constraint firstItem="DKd-qI-ztS" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="IAQ-bF-9ZO"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="DKd-qI-ztS" secondAttribute="bottom" id="Z1n-zd-SnS"/>
+                            <constraint firstAttribute="trailing" secondItem="DKd-qI-ztS" secondAttribute="trailing" id="dVY-jW-9pI"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="4PT-fh-7WN"/>
                     <connections>
-                        <segue destination="Rse-Wz-To1" kind="show" id="PFp-nj-hYB"/>
+                        <outlet property="collection" destination="DKd-qI-ztS" id="97H-yf-QyD"/>
+                        <segue destination="Rse-Wz-To1" kind="show" identifier="ShowSelected" id="PFp-nj-hYB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1252" y="364"/>
+            <point key="canvasLocation" x="1230" y="364"/>
         </scene>
         <!--Store Table View Controller-->
         <scene sceneID="5zo-uR-fH0">
@@ -188,4 +233,7 @@
             <point key="canvasLocation" x="556" y="364"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="halfnhalf" width="600" height="384"/>
+    </resources>
 </document>
