@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ji3-l6-1Ge">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ji3-l6-1Ge">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -114,6 +114,7 @@
                         <viewControllerLayoutGuide type="bottom" id="5SU-qo-Gab"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Kn4-Rk-5o2">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yFP-m0-NaH">
@@ -156,6 +157,7 @@
                         <viewControllerLayoutGuide type="bottom" id="noz-qU-c7Y"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="bU7-x7-qvS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bwu-XG-VvY">
@@ -198,6 +200,7 @@
                         <viewControllerLayoutGuide type="bottom" id="7US-Id-kV4"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="KtC-gb-Qfz">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oLt-yO-vBB">
@@ -234,13 +237,13 @@
         <!--Payment View Controller-->
         <scene sceneID="WfM-v2-b1P">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SQv-Je-bPN" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="PaymentVC" id="7NU-4c-Mfc" customClass="PaymentViewController" customModule="BobaNow" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kia-t9-xje"/>
                         <viewControllerLayoutGuide type="bottom" id="Vv0-JH-C1D"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="nng-AS-29V">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u1O-N0-Cca">
@@ -270,6 +273,7 @@
                         </variation>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SQv-Je-bPN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2038" y="-514.5"/>
         </scene>
